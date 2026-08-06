@@ -1,0 +1,37 @@
+flowchart LR
+    CC["剪映短影音<br/>剪輯全流程"]
+
+    subgraph 群組一 ["時間軸與素材"]
+        TRACK["多軌道排版"]
+        ASR["自動字幕辨識"]
+    end
+    subgraph 群組二 ["聲音與節奏"]
+        AUDIO["音訊降噪淡化"]
+        BEAT["卡點踩點"]
+    end
+    subgraph 群組三 ["視覺特效"]
+        MASK["蒙版摳像"]
+        LUT["濾鏡LUT調色"]
+        KEY["關鍵幀動畫"]
+    end
+    subgraph 群組四 ["導出與維護"]
+        EXPORT["格式導出"]
+        RELINK["素材重新連結"]
+    end
+
+    CREATIVE["22章創意特效技法"]
+
+    CC -- "先排版剪輯" --> TRACK
+    CC -- "同步生成" --> ASR
+    ASR -- "對齊字幕時間" --> TRACK
+    TRACK -- "疊加聲音軌" --> AUDIO
+    AUDIO -- "依節拍設計卡點" --> BEAT
+    BEAT -- "驅動畫面剪切點" --> TRACK
+    TRACK -- "定案後包裝" --> MASK
+    MASK -- "去背後調色" --> LUT
+    LUT -- "定調後加動態" --> KEY
+    KEY -- "技法融會貫通" --> CREATIVE
+    CREATIVE -- "驗證成品" --> EXPORT
+    EXPORT -- "遺失驚嘆號" --> RELINK
+    RELINK -- "修復後重新導出" --> EXPORT
+    CC -- "遇到問題查閱" --> RELINK

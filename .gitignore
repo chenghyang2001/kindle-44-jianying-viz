@@ -1,0 +1,8 @@
+*.stackdump
+core
+*.core
+*.dmp
+*~
+*.swp
+.DS_Store
+Thumbs.db

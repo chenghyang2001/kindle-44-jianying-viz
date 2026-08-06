@@ -1,0 +1,30 @@
+flowchart TD
+    subgraph L1 ["專案管理與工程層（基建層）"]
+        DRAFT["草稿建立與路徑管理"]
+        CLOUD["雲端備份同步"]
+        RELINK["素材遺失重新連結"]
+    end
+    subgraph L2 ["素材與媒體層（要素層）"]
+        MEDIA["影片／圖片／音效匯入"]
+        ASR["自動語音辨識字幕"]
+        STICKER["貼紙與花字素材庫"]
+    end
+    subgraph L3 ["時間軸軌道層（結構層）"]
+        TRACK["多軌道疊加管理"]
+        CUT["裁切分割與吸附對齊"]
+    end
+    subgraph L4 ["特效與動態控制層（修飾層）"]
+        MASK["摳像與蒙版合成"]
+        LUT["濾鏡與LUT調色"]
+        KEY["關鍵幀動態動畫"]
+    end
+    DRAFT -- "建立可儲存的工作環境" --> MEDIA
+    CLOUD -- "跨裝置同步保護" --> DRAFT
+    RELINK -- "修復路徑失效" --> MEDIA
+    MEDIA -- "拖入軌道排序" --> TRACK
+    ASR -- "生成字幕軌" --> TRACK
+    STICKER -- "疊加裝飾軌" --> TRACK
+    TRACK -- "裁切定案" --> CUT
+    CUT -- "精修片段進入包裝" --> MASK
+    MASK -- "去背合成後調色" --> LUT
+    LUT -- "定調後加動態" --> KEY
