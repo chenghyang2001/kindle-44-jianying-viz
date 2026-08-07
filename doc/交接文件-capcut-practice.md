@@ -323,3 +323,34 @@ ls "$USERPROFILE/AppData/Local/CapCut/User Data/Projects/com.lveditor.draft/"
 ### 本次 session 中止原因
 
 不是功能卡死、不是用量超支，是使用者主動要求「先不用繼續，把目前做的事記下來就好」，直接中止任務。
+
+---
+
+## 第四輪（公司機 B00332，執行練習題腳本）— 2026-08-07 又一個 session，因用量提前收工
+
+### 背景
+
+同一天稍晚，使用者要求把新寫的 `doc/練習題-仿製addwii短片.md`（仿製 addwii 33 秒開箱短片的練習腳本）實際跑一次 live demo。一開始就發現公司機上其實已經存在一個先前 session 沒記錄進文件的草稿 **`0807-R3`**（內部路徑 `C:/Users/B00332/AppData/Local/CapCut/User Data/Projects/com.lveditor.draft/0807 (2)`，30fps、9:16），時間軸已有倒數數字片段、「Mother and her daughter with dog in the park」素材、「STYLE」文字片段——這些內容的來源不明（可能是更早某次未寫進文件的操作），下一個 session 若要用這個草稿，先確認時間軸內容再決定沿用或清空重做。
+
+### 這次的新發現
+
+選取草稿裡的「Mother and her daughter with dog in the park」素材，檢查右側屬性面板分頁列：**只有「影片／速度／插入動畫／調整／AI風格化」5 個分頁，沒有「音樂」分頁** → 確認也是靜音素材。
+
+**這個發現值得更新既有的判斷法則**：先前第二、三輪只驗證過「studio／news／green screen」這類棚拍風格容易無聲，這次證實**連「媽媽女兒公園遛狗」這種居家生活/家庭風格的素材也一樣沒有內嵌語音**。目前已知無聲的素材類型清單（都用同一個「查音樂分頁」方法排除）：
+
+- `old senior man talks to camera - green screen - studio`（第二輪）
+- `News reporter talking in studio.`（第三輪）
+- `Mother and her daughter with their dog in the park`（第四輪，新增）
+
+**修正後的結論**：畫面內容類型（棚拍 vs 居家 vs 生活風格）完全不能預測有沒有聲音，CapCut 免版稅素材庫裡「有沒有內嵌語音」看起來更接近隨機分佈，不能靠關鍵字直覺篩選，**每一支候選素材都必須實際加入時間軸、選取、檢查屬性面板分頁列**，沒有捷徑。`doc/練習題-仿製addwii短片.md` 裡「避開 studio/news，改用 vlog/selfie」的建議應視為**弱訊號、不是可靠篩選法**，之後再更新該文件澄清這點。
+
+### 中止原因
+
+**用量超支**：本次 session 開始時週用量已在 ~99%，執行到這一步已經逼近上限，使用者尚未下令，Claude 主動判斷比照前兩輪的教訓（因為超支被迫中斷過兩次）提前停止，避免像第二輪一樣悶頭做到被截斷。**這次還沒找到任何一支確認有聲的素材**，Stage 3 / 練習 7.1 的核心問題依然未解。
+
+### 給下一個 session 的建議
+
+1. 先確認用量狀況（若接近週配額重置時間，等重置後再開始這項高截圖量的任務）
+2. 打開草稿 `0807-R3`，先看一眼時間軸內容決定是否沿用
+3. 繼續在資料庫搜尋候選素材（`interview response`／`street interview`／`talking outdoors`／`vlog` 等關鍵字**僅供搜尋起點，不代表一定有聲**），每支都要選取檢查「音樂」分頁，直到找到一支確認有聲的為止
+4. 找到後才繼續 `doc/練習題-仿製addwii短片.md` 的 7.2-7.6
