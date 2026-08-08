@@ -41,3 +41,26 @@ is out of scope for `book-viz-pack`; use `mmd-gen` instead and keep its output i
 - Two PPTX files currently coexist with slightly different names (`剪映-圖表合輯.pptx` vs
   `kindle-44-剪映-圖表合輯.pptx`) — the `kindle-44-` prefixed one is the canonical, book-ID-qualified name;
   treat the unprefixed one as legacy unless told otherwise.
+
+## CapCut hands-on practice extension
+
+This repo also grew a second, unrelated body of work: live CapCut (剪映) desktop-automation practice
+sessions built on top of the book's content. History, coordinates, and every discovered CapCut bug/limit
+live in `doc/交接文件-capcut-practice.md` — read it before starting a new hands-on practice round in this
+repo, don't rediscover the same pitfalls.
+
+Three **global** skills (in `~/.claude/skills/`, usable from any project, not just this repo) came out of
+that practice work:
+
+- `capcut-narration-video` — narration script → fully rendered + published YouTube video, fixed background/
+  music/subtitle style, only the narration text varies
+- `capcut-photo-video` — a batch of photos → celebration/tribute video with blur-fill background, music,
+  closing title card
+- `capcut-chapter-livedemo` — a teaching-chapter source (PDF/PPTX/DOCX/tutorial video/plain text) → parsed
+  into an N-module course outline → live-demoed step by step in CapCut with spoken TTS narration; checks in
+  with the user after every module (continue / redo / stop) and only exports/publishes if the user
+  explicitly asks. Built 2026-08-09 from a Chapter 10 "audio & music" live demo run in this repo.
+
+None of these three skills live in this repo — they're global and apply to whatever CapCut project is open
+at the time, so don't expect to find their implementation here. This repo is just where they were born and
+where the practice history is documented.
