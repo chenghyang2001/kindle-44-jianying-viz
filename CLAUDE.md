@@ -57,10 +57,13 @@ that practice work:
 - `capcut-photo-video` — a batch of photos → celebration/tribute video with blur-fill background, music,
   closing title card
 - `capcut-chapter-livedemo` — a teaching-chapter source (PDF/PPTX/DOCX/tutorial video/plain text) → parsed
-  into an N-module course outline → live-demoed step by step in CapCut with spoken TTS narration; checks in
-  with the user after every module (continue / redo / stop) and only exports/publishes if the user
-  explicitly asks. Built 2026-08-09 from a Chapter 10 "audio & music" live demo run in this repo.
+  into an N-module course outline → live-demoed step by step in CapCut with spoken TTS narration, with a
+  silent screen recording + written recap notes saved to `doc/demo-recordings/<chapter>-<date>/` so the
+  demo doesn't need to be redone just to review it. Checks in with the user after every module (continue /
+  redo / stop) and only exports/publishes if the user explicitly asks. Built 2026-08-09 from a Chapter 10
+  "audio & music" live demo run in this repo.
 
 None of these three skills live in this repo — they're global and apply to whatever CapCut project is open
-at the time, so don't expect to find their implementation here. This repo is just where they were born and
-where the practice history is documented.
+at the time, so don't expect to find their implementation here. This repo is just where they were born,
+where the practice history is documented, and — for `capcut-chapter-livedemo` specifically — where its
+demo recordings/notes land by default (`doc/demo-recordings/`).
