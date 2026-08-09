@@ -1,6 +1,6 @@
 # 第6章｜媒體功能詳解：掌握時間軸與畫布的絕對控制權 — Live Demo 複習筆記
 
-錄影：`screen.mkv`（或 remux 後的 `screen.mp4`）
+錄影：已移除（原 `screen.mkv`/`screen.mp4`，檔案過大且使用者評估不實用，2026-08-09 刪除）
 Demo 日期：2026-08-09
 CapCut 專案：`媒體功能-畫布控制與鏡像特效`（新建專案，Phase 2 已依規則立刻重新命名）
 教材來源：`c:\Users\user\Downloads\Media_Function_Mastery.pdf`（10 頁投影片，NotebookLM 生成，

@@ -1,2 +1,0 @@
-doc/demo-recordings/ch6-media-canvas-2026-08-09/screen.mkv filter=lfs diff=lfs merge=lfs -text
-doc/demo-recordings/ch6-media-canvas-2026-08-09/screen.mp4 filter=lfs diff=lfs merge=lfs -text
