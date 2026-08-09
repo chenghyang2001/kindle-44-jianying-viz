@@ -213,3 +213,21 @@ metadata 顯示 85 頁為誤報）
 **本次 demo 最有價值的技術發現**：播放器縮圖上的浮動控制端點（Module 2 縮放端點）在自動化
 滑鼠事件下命中率低，但獨立對話框內的拖曳控制元件（Module 4 裁切對話框邊界）命中率高很多。
 未來若要在自動化環境示範任何依賴拖曳的操作，優先找專屬對話框內的控制元件。
+
+---
+
+## Phase 4 收尾：匯出並發布 YouTube
+
+使用者選擇「匯出並發布 YouTube」。
+
+- 匯出設定：1080P / H.264 / mp4 / 30fps / 位元率推薦，時長 24 秒，檔案大小約 36MB，開頭
+  已內嵌 Module 5 設計的專屬封面
+- 匯出至：`C:/Users/user/AppData/Local/CapCut/...`
+- YouTube 發布：標題「剪映媒體功能完整教學：時間軸群組、縮放旋轉、9:16裁切、鏡像特效、
+  專屬封面設計」，說明已清空 CapCut 預設推廣文字並換成內容摘要，顯示設定「公開」，
+  帳號 ChengHsien Yang
+- CapCut 匯出對話框確認「已分享您的影片」，YouTube 分享成功
+
+**留存資料夾的 git 慣例補充**：這次錄影檔（`screen.mkv`/`screen.mp4`，各約 133MB）超過
+GitHub 單檔 100MB 限制，改用 `git-lfs` 追蹤後才成功 push，詳細處理方式已記錄進 skill 的
+`references/recording-and-notes.md`。
